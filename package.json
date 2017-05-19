@@ -1,9 +1,9 @@
 {
-  "name": "minimalTextfield",
+  "name": "minimalReactText",
   "version": "1.0.0-rc.4",
   "description": "A Select control built with and for ReactJS",
-  "main": "lib/MinimalTextfield.js",
-  "style": "dist/minimalTextfield.min.css",
+  "main": "lib/MinimalReactText.js",
+  "style": "dist/minimalReactText.min.css",
   "author": "Jed Watson",
   "license": "MIT",
   "repository": {

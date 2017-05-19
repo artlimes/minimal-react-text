@@ -1,8 +1,8 @@
 {
-  "name": "minimalTextfield",
+  "name": "minimalReactText",
   "main": [
-    "dist/minimalTextfield.min.js",
-    "dist/minimalTextfield.min.css"
+    "dist/minimalReactText.min.js",
+    "dist/minimalReactText.min.css"
   ],
   "version": "1.0.0-rc.4",
   "homepage": "https://github.com/JedWatson/react-select",

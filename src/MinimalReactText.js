@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-class MinimalTextfield extends Component {
+class MinimalReactText extends Component {
   constructor(props) {
     super(props);
 
@@ -156,14 +156,14 @@ class MinimalTextfield extends Component {
  }
 }
 
-MinimalTextfield.defaultProps = {
+MinimalReactText.defaultProps = {
   autoComplete: false,
   type: 'text',
   isDisabled: false
 };
 
 if (process.env.NODE_ENV !== 'production') {
-  MinimalTextfield.propTypes = {
+  MinimalReactText.propTypes = {
     'autoComplete': PropTypes.bool,
     'wrapperClasses': PropTypes.string,
     'inputClasses': PropTypes.string,
@@ -183,4 +183,4 @@ if (process.env.NODE_ENV !== 'production') {
  };
 }
 
-export default MinimalTextfield;
+export default MinimalReactText;
