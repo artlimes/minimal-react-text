@@ -1,15 +1,18 @@
 {
-  "name": "minimalReactText",
+  "name": "minimal-react-text",
   "version": "1.0.0-rc.4",
   "description": "A Select control built with and for ReactJS",
   "main": "lib/MinimalReactText.js",
-  "style": "dist/minimalReactText.min.css",
-  "author": "Jed Watson",
+  "style": "dist/minimal-react-text.min.css",
+  "author": "Artlimes",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/artlimes/minimal-react-text.git"
   },
+  "files": [
+  "dist/*.css"
+  ],
   "dependencies": {
     "create-react-class": "^15.5.2",
     "classnames": "^2.2.4",
@@ -67,13 +70,13 @@
     "watch": "gulp watch:lib"
   },
   "keywords": [
-    "combobox",
     "form",
     "input",
-    "multiselect",
+    "floatlabel",
     "react",
     "react-component",
-    "select",
+    "textarea",
+    "input",
     "ui"
   ]
 }

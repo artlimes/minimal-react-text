@@ -14,7 +14,7 @@ var taskConfig = {
 		],
 		less: {
 			path: 'less',
-			entry: 'minimalReactText.less'
+			entry: 'default.less'
 		}
 	},
 

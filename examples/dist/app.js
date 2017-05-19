@@ -18,15 +18,50 @@ var _componentsMinimalReactText = require('./components/MinimalReactText');
 var _componentsMinimalReactText2 = _interopRequireDefault(_componentsMinimalReactText);
 
 _reactDom2['default'].render(_react2['default'].createElement(
-  'div',
-  null,
-  _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label' }),
-  _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', placeholder: 'Placeholder' }),
-  _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', placeholder: 'Placeholder', inputValue: 'InputValue' }),
-  _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', isRequired: true }),
-  _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', placeholder: 'Placeholder', isDisabled: true }),
-  _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', type: 'textarea' }),
-  _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', type: 'textarea', textareaLarge: true })
+       'div',
+       null,
+       _react2['default'].createElement(
+              'h3',
+              null,
+              'Normal'
+       ),
+       _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label' }),
+       _react2['default'].createElement(
+              'h3',
+              null,
+              'With Placeholder'
+       ),
+       _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', placeholder: 'Placeholder' }),
+       _react2['default'].createElement(
+              'h3',
+              null,
+              'With Placeholder & InputValue'
+       ),
+       _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', placeholder: 'Placeholder', inputValue: 'InputValue' }),
+       _react2['default'].createElement(
+              'h3',
+              null,
+              'Required'
+       ),
+       _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', isRequired: true }),
+       _react2['default'].createElement(
+              'h3',
+              null,
+              'Disabled'
+       ),
+       _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', placeholder: 'Placeholder', isDisabled: true }),
+       _react2['default'].createElement(
+              'h3',
+              null,
+              'Normal Textarea'
+       ),
+       _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', type: 'textarea' }),
+       _react2['default'].createElement(
+              'h3',
+              null,
+              'Large Textarea'
+       ),
+       _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', type: 'textarea', textareaLarge: true })
 ), document.getElementById('example'));
 
 },{"./components/MinimalReactText":2,"react":undefined,"react-dom":undefined}],2:[function(require,module,exports){

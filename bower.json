@@ -1,15 +1,15 @@
 {
-  "name": "minimalReactText",
+  "name": "minimal-react-text",
   "main": [
-    "dist/minimalReactText.min.js",
-    "dist/minimalReactText.min.css"
+    "dist/minimal-react-text.min.js",
+    "dist/minimal-react-text.min.css"
   ],
   "version": "1.0.0-rc.4",
-  "homepage": "https://github.com/JedWatson/react-select",
+  "homepage": "https://github.com/artlimes/minimal-react-text",
   "authors": [
-    "Jed Watson"
+    "Artlimes"
   ],
-  "description": "A Select control built with and for ReactJS",
+  "description": "A float label input built with and for ReactJS",
   "moduleType": [
     "amd",
     "globals",
@@ -21,9 +21,8 @@
   "keywords": [
     "react",
     "react-component",
-    "select",
-    "multiselect",
-    "combobox",
+    "floatlabel",
+    "textarea",
     "input",
     "form",
     "ui"

@@ -184,7 +184,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],"minimalReactText":[function(require,module,exports){
+},{}],"minimal-react-text":[function(require,module,exports){
 (function (process){
 'use strict';
 
