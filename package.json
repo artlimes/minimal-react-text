@@ -10,9 +10,6 @@
     "type": "git",
     "url": "https://github.com/artlimes/minimal-react-text.git"
   },
-  "files": [
-  "dist/*.css"
-  ],
   "dependencies": {
     "create-react-class": "^15.5.2",
     "classnames": "^2.2.4",
