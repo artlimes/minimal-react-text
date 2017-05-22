@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -33,7 +33,7 @@ class MinimalReactText extends Component {
       hasValue = true;
       hasError = (nextProps.pattern && !nextProps.pattern.test(inputValue));
    }
-    this.setState({hasValue, hasError, inputValue});
+    this.setState({ hasValue, hasError, inputValue });
  }
 
   onBlur(event) {
@@ -41,7 +41,7 @@ class MinimalReactText extends Component {
       isFocused: false
     });
 
-    const {pattern, isRequired} = this.props;
+    const { pattern, isRequired } = this.props;
     let hasError;
 
     this.setState({
@@ -91,18 +91,34 @@ class MinimalReactText extends Component {
       isRequired,
       label,
       placeholder,
-      textareaLarge,
-      type} = this.props;
+      size,
+      theme,
+      type } = this.props;
 
-    const {hasValue, hasError, inputValue, isFocused} = this.state;
+    const { hasValue, hasError, inputValue, isFocused } = this.state;
 
-    const wrapperClasses = classNames('tx-wrapper', this.props.wrapperClasses, {'tx-focused': isFocused}, {'tx-disabled': isDisabled}, {'tx-wrapper-textarea': type === 'textarea'});
+    const wrapperClasses = classNames(
+      'tx-wrapper',
+      this.props.wrapperClasses,
+      { 'tx-focused': isFocused },
+      { 'tx-disabled': isDisabled },
+      { 'tx-wrapper-textarea': type === 'textarea' },
+      { 'tx-wrapper-white': theme === 'dark' });
 
-    const inputClasses = classNames('tx-input', this.props.inputClasses, {'tx-textarea-large': textareaLarge});
+    const inputClasses = classNames(
+      'tx-input',
+      this.props.inputClasses,
+      { 'tx-textarea-large': size === 'large' });
 
-    const labelClasses = classNames('tx-label', this.props.labelClasses, {'tx-above': placeholder || hasValue || isFocused});
+    const labelClasses = classNames(
+      'tx-label',
+      this.props.labelClasses,
+      { 'tx-above': placeholder || hasValue || isFocused });
 
-    const errortextClasses = classNames('tx-errortext', this.props.errortextClasses, {'tx-errortext-visible': hasError});
+    const errortextClasses = classNames(
+      'tx-errortext',
+      this.props.errortextClasses,
+      { 'tx-errortext-visible': hasError });
 
     const fieldRequiredMessage = 'Field is required';
 
@@ -159,7 +175,9 @@ class MinimalReactText extends Component {
 MinimalReactText.defaultProps = {
   autoComplete: false,
   type: 'text',
-  isDisabled: false
+  isDisabled: false,
+  theme: 'normal',
+  size: 'normal'
 };
 
 if (process.env.NODE_ENV !== 'production') {
@@ -174,10 +192,12 @@ if (process.env.NODE_ENV !== 'production') {
     'inputName': PropTypes.string,
     'inputValue': PropTypes.string,
     'isDisabled': PropTypes.bool,
+    'isRequired': PropTypes.bool,
     'onChange': PropTypes.func,
     'pattern': PropTypes.any,
     'placeholder': PropTypes.string,
-    'isRequired': PropTypes.bool,
+    'size': PropTypes.string,
+    'theme': PropTypes.string,
     'type': PropTypes.string.isRequired,
     'hasError': PropTypes.bool
  };
