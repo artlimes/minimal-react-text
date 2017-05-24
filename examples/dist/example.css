@@ -28,6 +28,8 @@
   line-height: 20px;
 }
 .tx-wrapper .tx-input {
+  position: relative;
+  z-index: 2;
   width: 100%;
   margin-bottom: 4px;
   border: none;
@@ -72,6 +74,7 @@
 .tx-wrapper .tx-label {
   font-weight: normal;
   position: absolute;
+  z-index: 1;
   left: 0;
   display: inline-block;
   transition: transform 250ms;
