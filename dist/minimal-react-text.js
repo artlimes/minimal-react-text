@@ -245,7 +245,7 @@ var MinimalReactText = (function (_Component) {
     value: function componentWillReceiveProps(nextProps) {
       var hasError = nextProps.hasError;
       var hasValue = !!nextProps.inputValue || this.state.hasValue;
-      var inputValue = nextProps.inputValue || this.state.inputValue;
+      var inputValue = nextProps.inputValue !== undefined ? nextProps.inputValue : this.state.inputValue;
 
       if (!hasError && inputValue !== '' && typeof inputValue !== 'undefined' && !!nextProps.pattern) {
         hasValue = true;

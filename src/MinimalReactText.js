@@ -27,7 +27,7 @@ class MinimalReactText extends Component {
   componentWillReceiveProps(nextProps) {
     let hasError = nextProps.hasError;
     let hasValue = !!nextProps.inputValue || this.state.hasValue;
-    const inputValue = nextProps.inputValue || this.state.inputValue;
+    const inputValue = (nextProps.inputValue !== undefined ? nextProps.inputValue : this.state.inputValue);
 
     if (!hasError && inputValue !== '' && typeof inputValue !== 'undefined' && !!nextProps.pattern) {
       hasValue = true;
