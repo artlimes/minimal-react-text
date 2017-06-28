@@ -8,8 +8,17 @@
         background-color: @focused-color;
       }
     }
-    .tx-above {
+    .tx-label.tx-above {
+      transform: translateY(-100%) scale(.875, .875);
       color: @focused-color;
+    }
+    .tx-input,
+    textarea {
+      // the props below make the indicator pink
+      color: @focused-color;
+      text-shadow: 0 0 0 @white-basic-color;
+
+      -webkit-text-fill-color: #000;
     }
   }
   &.tx-disabled {
@@ -33,6 +42,7 @@
     line-height: @label-line-height;
   }
   .tx-input {
+    line-height: @input-line-height;
     position: relative;
     z-index: 2;
     width: 100%;
@@ -89,7 +99,7 @@
     transition: transform 250ms;
     &.tx-above {
       transition: transform 250ms;
-      transform: translateY(-100%) scale(.875, .875);
+      transform: translateY(-100%);
       transform-origin: top left;
     }
   }
@@ -106,6 +116,12 @@
 }
 
 .tx-wrapper-white {
+  &.tx-focused {
+    .tx-input,
+    textarea {
+      -webkit-text-fill-color: #fff;
+    }
+  }
   div {
     &:after {
       background-color: @white-underline-color;
@@ -145,8 +161,35 @@
   }
   .tx-label {
     left: 10px;
+    transition: transform 250ms;
+    transform: translateY(0px);
     &.tx-above {
-      transform: scale(.875, .875);
+      transform: translateY(0px);
     }
+  }
+  &.tx-focused {
+    .tx-label.tx-above {
+      transition: transform 250ms;
+      transform: translateY(0px) scale(.875, .875);
+    }
+  }
+}
+
+.tx-wrapper {
+  // to solve the sometimes visible ":after" of minimal-text
+  & > div {
+    border-bottom: 1px solid @white-underline-color;
+    &:after {
+      display: none;
+    }
+  }
+  .tx-label.tx-above,
+  .tx-label {
+    min-width: 60px;
+    margin: 0;
+  }
+  input {
+    margin: 0;
+    padding: 0;
   }
 }

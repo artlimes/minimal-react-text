@@ -190,7 +190,9 @@ if (process.env.NODE_ENV !== 'production') {
     'data-event-action': PropTypes.string,
     'id': PropTypes.string,
     'inputName': PropTypes.string,
-    'inputValue': PropTypes.string,
+        'inputValue': PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number]),
     'isDisabled': PropTypes.bool,
     'isRequired': PropTypes.bool,
     'onChange': PropTypes.func,

@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import MinimalReactText from './components/MinimalReactText';
 
 ReactDOM.render(
+  <form noValidate>
 	<div>
           <h3>Normal</h3>
 	    <MinimalReactText label="Label"/>
@@ -32,6 +33,8 @@ ReactDOM.render(
             <MinimalReactText label="Label" theme="dark"/>
             <MinimalReactText label="Label" type="textarea" theme="dark"/>
           </div>
-	</div>,
+	</div>
+    <button type="submit">Submit</button>
+  </form>,
 	document.getElementById('example')
 );

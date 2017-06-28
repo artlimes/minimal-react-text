@@ -408,7 +408,7 @@ if (process.env.NODE_ENV !== 'production') {
     'data-event-action': _propTypes2['default'].string,
     'id': _propTypes2['default'].string,
     'inputName': _propTypes2['default'].string,
-    'inputValue': _propTypes2['default'].string,
+    'inputValue': _propTypes2['default'].oneOfType([_propTypes2['default'].string, _propTypes2['default'].number]),
     'isDisabled': _propTypes2['default'].bool,
     'isRequired': _propTypes2['default'].bool,
     'onChange': _propTypes2['default'].func,
