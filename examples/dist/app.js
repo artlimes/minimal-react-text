@@ -174,7 +174,7 @@ var MinimalReactText = (function (_Component) {
       // update on this.setState happens after this functions is completed
       // in order to avoid that 'skipped' change of value, I use the
       // hasError variable
-      hasError = event.currentTarget.value.length ? pattern && !pattern.test(event.currentTarget.value) : false;
+      hasError = event.currentTarget.value.length ? pattern && !pattern.test(event.currentTarget.value) : isRequired;
 
       if (this.props.onBlur) {
         this.props.onBlur(event, this, hasError);
