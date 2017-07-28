@@ -45,23 +45,27 @@
   background-color: transparent;
 }
 .tx-wrapper .tx-input::-webkit-input-placeholder {
+  color: #9b9b9b;
   font-size: 14px;
   font-weight: 300;
   line-height: 18px;
 }
 .tx-wrapper .tx-input:-moz-placeholder {
+  color: #9b9b9b;
   font-size: 14px;
   /* FF 4-18 */
   font-weight: 300;
   line-height: 18px;
 }
 .tx-wrapper .tx-input::-moz-placeholder {
+  color: #9b9b9b;
   font-size: 14px;
   /* FF 19+ */
   font-weight: 300;
   line-height: 18px;
 }
 .tx-wrapper .tx-input:-ms-input-placeholder {
+  color: #9b9b9b;
   font-size: 14px;
   /* IE 10+ */
   font-weight: 300;
