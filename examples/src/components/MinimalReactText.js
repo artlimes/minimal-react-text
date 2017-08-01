@@ -91,7 +91,8 @@ class MinimalReactText extends Component {
       isRequired,
       label,
       placeholder,
-      theme } = this.props;
+      theme,
+      type } = this.props;
 
     const { hasValue, hasError, inputValue, isFocused } = this.state;
 
@@ -134,6 +135,7 @@ class MinimalReactText extends Component {
             onFocus={this.onFocus.bind(this)}
             onBlur={this.onBlur.bind(this)}
             onChange={this.onChange.bind(this)}
+            type={type}
           />
           {label ? <label className={labelClasses}
             htmlFor={id}
@@ -153,7 +155,8 @@ class MinimalReactText extends Component {
 MinimalReactText.defaultProps = {
   autoComplete: false,
   isDisabled: false,
-  theme: 'normal'
+  theme: 'normal',
+  type: 'text'
 };
 
 if (process.env.NODE_ENV !== 'production') {
@@ -175,7 +178,8 @@ if (process.env.NODE_ENV !== 'production') {
     'pattern': PropTypes.any,
     'placeholder': PropTypes.string,
     'theme': PropTypes.string,
-    'hasError': PropTypes.bool
+    'hasError': PropTypes.bool,
+    'type': PropTypes.string,
  };
 }
 
