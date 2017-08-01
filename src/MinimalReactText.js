@@ -91,9 +91,7 @@ class MinimalReactText extends Component {
       isRequired,
       label,
       placeholder,
-      size,
-      theme,
-      type } = this.props;
+      theme } = this.props;
 
     const { hasValue, hasError, inputValue, isFocused } = this.state;
 
@@ -102,13 +100,11 @@ class MinimalReactText extends Component {
       this.props.wrapperClasses,
       { 'tx-focused': isFocused },
       { 'tx-disabled': isDisabled },
-      { 'tx-wrapper-textarea': type === 'textarea' },
       { 'tx-wrapper-white': theme === 'dark' });
 
     const inputClasses = classNames(
       'tx-input',
-      this.props.inputClasses,
-      { 'tx-textarea-large': size === 'large' });
+      this.props.inputClasses );
 
     const labelClasses = classNames(
       'tx-label',
@@ -125,38 +121,20 @@ class MinimalReactText extends Component {
     return (
       <div className={wrapperClasses}>
         <div>
-          {type !== 'textarea' ?
-            <input
-              autoComplete={this.props.autoComplete}
-              className={inputClasses}
-              disabled={isDisabled}
-              id={id}
-              type={type}
-              required={isRequired}
-              value={inputValue || ''}
-              data-event-action={this.props['data-event-action']}
-              name={this.props.inputName}
-              placeholder={placeholder}
-              onFocus={this.onFocus.bind(this)}
-              onBlur={this.onBlur.bind(this)}
-              onChange={this.onChange.bind(this)}
-            /> :
-            <textarea
-              autoComplete={this.props.autoComplete}
-              className={inputClasses}
-              disabled={isDisabled}
-              id={id}
-              type={type}
-              required={isRequired}
-              value={inputValue || ''}
-              data-event-action={this.props['data-event-action']}
-              name={this.props.inputName}
-              placeholder={placeholder}
-              onFocus={this.onFocus.bind(this)}
-              onBlur={this.onBlur.bind(this)}
-              onChange={this.onChange.bind(this)}
-            />
-         }
+          <input
+            autoComplete={this.props.autoComplete}
+            className={inputClasses}
+            disabled={isDisabled}
+            id={id}
+            required={isRequired}
+            value={inputValue || ''}
+            data-event-action={this.props['data-event-action']}
+            name={this.props.inputName}
+            placeholder={placeholder}
+            onFocus={this.onFocus.bind(this)}
+            onBlur={this.onBlur.bind(this)}
+            onChange={this.onChange.bind(this)}
+          />
           {label ? <label className={labelClasses}
             htmlFor={id}
                    >
@@ -174,10 +152,8 @@ class MinimalReactText extends Component {
 
 MinimalReactText.defaultProps = {
   autoComplete: false,
-  type: 'text',
   isDisabled: false,
-  theme: 'normal',
-  size: 'normal'
+  theme: 'normal'
 };
 
 if (process.env.NODE_ENV !== 'production') {
@@ -198,9 +174,7 @@ if (process.env.NODE_ENV !== 'production') {
     'onChange': PropTypes.func,
     'pattern': PropTypes.any,
     'placeholder': PropTypes.string,
-    'size': PropTypes.string,
     'theme': PropTypes.string,
-    'type': PropTypes.string.isRequired,
     'hasError': PropTypes.bool
  };
 }

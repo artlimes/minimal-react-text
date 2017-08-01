@@ -12,8 +12,7 @@
       transform: translateY(-100%) scale(.875, .875);
       color: @focused-color;
     }
-    .tx-input,
-    textarea {
+    .tx-input {
       // the props below make the indicator pink
       color: @focused-color;
       text-shadow: 0 0 0 @white-basic-color;
@@ -117,8 +116,7 @@
 
 .tx-wrapper-white {
   &.tx-focused {
-    .tx-input,
-    textarea {
+    .tx-input {
       -webkit-text-fill-color: #fff;
     }
   }
@@ -137,40 +135,6 @@
     }
     &:-webkit-autofill:focus {
       -webkit-text-fill-color: @white-basic-color;
-    }
-  }
-}
-
-.tx-wrapper-textarea {
-  div {
-    padding: 10px 10px 5px;
-    border: 1px solid @textarea-border-color;
-    border-radius: 4px;
-    &:after {
-      display: none;
-    }
-  }
-  textarea {
-    height: 60px;
-    margin-top: 20px;
-    padding: 0;
-    resize: none;
-    &.tx-textarea-large {
-      height: 100px;
-    }
-  }
-  .tx-label {
-    left: 10px;
-    transition: transform 250ms;
-    transform: translateY(0px);
-    &.tx-above {
-      transform: translateY(0px);
-    }
-  }
-  &.tx-focused {
-    .tx-label.tx-above {
-      transition: transform 250ms;
-      transform: translateY(0px) scale(.875, .875);
     }
   }
 }
