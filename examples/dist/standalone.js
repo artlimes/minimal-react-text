@@ -245,6 +245,12 @@ var MinimalReactText = (function (_Component) {
     value: function shouldComponentUpdate(nextProps, nextState) {
       var propsTocheck = ['inputValue', 'hasError', 'data-event-action', 'wrapperClasses', 'inputClasses', 'labelClasses', 'errortextClasses'];
 
+      for (var key in nextState) {
+        if (this.state[key] !== nextState[key]) {
+          return true;
+        }
+      }
+
       for (var i = 0; i < propsTocheck.length; i++) {
         var propToCheck = propsTocheck[i];
         if (this.props[propToCheck] !== nextProps[propToCheck]) {
