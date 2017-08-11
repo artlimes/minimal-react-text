@@ -25,7 +25,7 @@ class MinimalReactText extends Component {
  }
 
   shouldComponentUpdate (nextProps, nextState) {
-    const propsTocheck = [ 'inputValue', 'hasError', 'data-event-action', 'wrapperClasses', 'inputClasses', 'labelClasses', 'errortextClasses'];
+    const propsTocheck = [ 'inputValue', 'placeholder', 'hasError', 'data-event-action', 'wrapperClasses', 'inputClasses', 'labelClasses', 'errortextClasses'];
 
     for ( let key in nextState ) {
       if (this.state[key] !== nextState[key]) {
