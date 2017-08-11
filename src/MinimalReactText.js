@@ -14,15 +14,27 @@ class MinimalReactText extends Component {
     if (inputValue !== '' && typeof inputValue !== 'undefined') {
       hasValue = true;
       hasError = props.hasError || (props.pattern && !props.pattern.test(inputValue));
-   }
+    }
 
     this.state = {
       hasValue,
       hasError,
       inputValue,
       isFocused
-   };
- }
+    };
+  }
+
+  shouldComponentUpdate (nextProps, nextState) {
+    const propsTocheck = [ 'inputValue', 'hasError', 'data-event-action', 'wrapperClasses', 'inputClasses', 'labelClasses', 'errortextClasses'];
+
+    for (let i = 0 ; i<propsTocheck.length; i++) {
+      let propToCheck = propsTocheck[i];
+      if (this.props[propToCheck] !== nextProps[propToCheck]) {
+        return true;
+      }
+    }
+    return false;
+  }
 
   componentWillReceiveProps(nextProps) {
     let hasError = nextProps.hasError;
@@ -32,9 +44,9 @@ class MinimalReactText extends Component {
     if (!hasError && inputValue !== '' && typeof inputValue !== 'undefined' && !!nextProps.pattern) {
       hasValue = true;
       hasError = (nextProps.pattern && !nextProps.pattern.test(inputValue));
-   }
+    }
     this.setState({ hasValue, hasError, inputValue });
- }
+  }
 
   onBlur(event) {
     this.setState({
@@ -47,7 +59,7 @@ class MinimalReactText extends Component {
     this.setState({
         hasValue: Boolean(event.currentTarget.value),
         hasError: (event.currentTarget.value.length ? (pattern && !pattern.test(event.currentTarget.value)) : isRequired)
-     });
+    });
 
     // update on this.setState happens after this functions is completed
     // in order to avoid that 'skipped' change of value, I use the
@@ -66,22 +78,22 @@ class MinimalReactText extends Component {
       hasValue: Boolean(event.currentTarget.value),
       inputValue: event.currentTarget.value,
       hasError: false
-   });
+  });
 
-    if (this.props.onChange) {
-      this.props.onChange(event, this);
-   }
+  if (this.props.onChange) {
+    this.props.onChange(event, this);
+  }
  }
 
   onFocus(event) {
     this.setState({
       isFocused: true
-   });
+    });
 
     if (this.props.onFocus) {
       this.props.onFocus(event, this);
-   }
- }
+    }
+  }
 
   render() {
     const {
@@ -180,7 +192,7 @@ if (process.env.NODE_ENV !== 'production') {
     'theme': PropTypes.string,
     'hasError': PropTypes.bool,
     'type': PropTypes.string,
- };
+  };
 }
 
 export default MinimalReactText;

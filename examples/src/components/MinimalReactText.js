@@ -24,6 +24,18 @@ class MinimalReactText extends Component {
    };
  }
 
+  shouldComponentUpdate (nextProps, nextState) {
+    const propsTocheck = [ 'inputValue', 'hasError', 'data-event-action', 'wrapperClasses', 'inputClasses', 'labelClasses', 'errortextClasses'];
+
+    for (let i = 0 ; i<propsTocheck.length; i++) {
+      let propToCheck = propsTocheck[i];
+      if (this.props[propToCheck] !== nextProps[propToCheck]) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   componentWillReceiveProps(nextProps) {
     let hasError = nextProps.hasError;
     let hasValue = !!nextProps.inputValue || this.state.hasValue;
@@ -32,9 +44,9 @@ class MinimalReactText extends Component {
     if (!hasError && inputValue !== '' && typeof inputValue !== 'undefined' && !!nextProps.pattern) {
       hasValue = true;
       hasError = (nextProps.pattern && !nextProps.pattern.test(inputValue));
-   }
+    }
     this.setState({ hasValue, hasError, inputValue });
- }
+  }
 
   onBlur(event) {
     this.setState({
