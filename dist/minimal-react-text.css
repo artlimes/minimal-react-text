@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 20px;
   text-align: left;
+  margin: 20px 0;
 }
 .tx-wrapper.tx-focused div:after {
   background-color: #ff115f;
