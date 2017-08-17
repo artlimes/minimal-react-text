@@ -37,7 +37,7 @@
   line-height: 18px;
   font-size: 14px;
   position: relative;
-  top: 4px;
+  top: 6px;
   z-index: 2;
   width: 100%;
   border: none;
@@ -126,7 +126,7 @@
   -webkit-text-fill-color: #fff;
 }
 .tx-wrapper > div {
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   border-bottom: 1px solid #9b9b9b;
   min-height: 25px;
 }
