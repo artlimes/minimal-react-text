@@ -37,7 +37,7 @@
   line-height: 18px;
   font-size: 14px;
   position: relative;
-  top: 6px;
+  top: 4px;
   z-index: 2;
   width: 100%;
   border: none;
@@ -45,23 +45,27 @@
   background-color: transparent;
 }
 .tx-wrapper .tx-input::-webkit-input-placeholder {
+  color: #9b9b9b;
   font-size: 14px;
   font-weight: 300;
   line-height: 18px;
 }
 .tx-wrapper .tx-input:-moz-placeholder {
+  color: #9b9b9b;
   font-size: 14px;
   /* FF 4-18 */
   font-weight: 300;
   line-height: 18px;
 }
 .tx-wrapper .tx-input::-moz-placeholder {
+  color: #9b9b9b;
   font-size: 14px;
   /* FF 19+ */
   font-weight: 300;
   line-height: 18px;
 }
 .tx-wrapper .tx-input:-ms-input-placeholder {
+  color: #9b9b9b;
   font-size: 14px;
   /* IE 10+ */
   font-weight: 300;
@@ -100,6 +104,7 @@
   visibility: hidden;
   min-height: 15px;
   color: #d7001a;
+  float: left;
 }
 .tx-wrapper .tx-errortext.tx-errortext-visible {
   visibility: visible;

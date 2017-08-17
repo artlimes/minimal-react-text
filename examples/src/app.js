@@ -20,7 +20,7 @@ ReactDOM.render(
             <MinimalReactText label="Label" isRequired={true}/>
 
           <h3>Disabled</h3>
-            <MinimalReactText label="Label" placeholder="Placeholder" isDisabled={true}/>
+            <MinimalReactText label="Label" placeholder="Placeholder" isDisabled={false}/>
 
           <h3>Dark Theme</h3>
           <div className="dark-background">

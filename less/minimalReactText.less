@@ -44,30 +44,34 @@
     line-height: @input-line-height;
     font-size: @input-font-size;
     position: relative;
-    top: 6px;
+    top: 4px;
     z-index: 2;
     width: 100%;
     border: none;
     outline: none;
     background-color: transparent;
     &::-webkit-input-placeholder {
+      color: @placeholder-color;
       font-size: @input-font-size;
       font-weight: 300;
       line-height: @input-line-height;
     }
     &:-moz-placeholder {
+      color: @placeholder-color;
       font-size: @input-font-size;
       /* FF 4-18 */
       font-weight: 300;
       line-height: @input-line-height;
     }
     &::-moz-placeholder {
+      color: @placeholder-color;
       font-size: @input-font-size;
       /* FF 19+ */
       font-weight: 300;
       line-height: @input-line-height;
     }
     &:-ms-input-placeholder {
+      color: @placeholder-color;
       font-size: @input-font-size;
       /* IE 10+ */
       font-weight: 300;
@@ -111,6 +115,7 @@
     visibility: hidden;
     min-height: @error-line-height;
     color: @error-color;
+    float: left;
     &.tx-errortext-visible {
       visibility: visible;
     }

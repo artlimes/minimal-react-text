@@ -52,7 +52,7 @@ _reactDom2['default'].render(_react2['default'].createElement(
       null,
       'Disabled'
     ),
-    _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', placeholder: 'Placeholder', isDisabled: true }),
+    _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', placeholder: 'Placeholder', isDisabled: false }),
     _react2['default'].createElement(
       'h3',
       null,
