@@ -14,15 +14,15 @@ class MinimalReactText extends Component {
     if (inputValue !== '' && typeof inputValue !== 'undefined') {
       hasValue = true;
       hasError = props.hasError || (props.pattern && !props.pattern.test(inputValue));
-   }
+    }
 
     this.state = {
       hasValue,
       hasError,
       inputValue,
       isFocused
-   };
- }
+    };
+  }
 
   shouldComponentUpdate (nextProps, nextState) {
     const propsTocheck = [ 'inputValue', 'id', 'isDisabled', 'isRequired', 'placeholder', 'hasError', 'data-event-action', 'wrapperClasses', 'inputClasses', 'labelClasses', 'errortextClasses'];
@@ -65,7 +65,7 @@ class MinimalReactText extends Component {
     this.setState({
         hasValue: Boolean(event.currentTarget.value),
         hasError: (event.currentTarget.value.length ? (pattern && !pattern.test(event.currentTarget.value)) : isRequired)
-     });
+    });
 
     // update on this.setState happens after this functions is completed
     // in order to avoid that 'skipped' change of value, I use the
@@ -84,22 +84,22 @@ class MinimalReactText extends Component {
       hasValue: Boolean(event.currentTarget.value),
       inputValue: event.currentTarget.value,
       hasError: false
-   });
+  });
 
-    if (this.props.onChange) {
-      this.props.onChange(event, this);
-   }
+  if (this.props.onChange) {
+    this.props.onChange(event, this);
+  }
  }
 
   onFocus(event) {
     this.setState({
       isFocused: true
-   });
+    });
 
     if (this.props.onFocus) {
       this.props.onFocus(event, this);
-   }
- }
+    }
+  }
 
   render() {
     const {
@@ -150,7 +150,9 @@ class MinimalReactText extends Component {
             data-event-action={this.props['data-event-action']}
             name={this.props.inputName}
             placeholder={placeholder}
+            onKeyPress={this.props.onKeyPress}
             onFocus={this.onFocus.bind(this)}
+            tabIndex={this.props.tabIndex || "0"}
             onBlur={this.onBlur.bind(this)}
             onChange={this.onChange.bind(this)}
             type={type}
@@ -198,7 +200,11 @@ if (process.env.NODE_ENV !== 'production') {
     'theme': PropTypes.string,
     'hasError': PropTypes.bool,
     'type': PropTypes.string,
- };
+    'tabIndex': PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number]),
+    'onKeyPress': PropTypes.func
+  };
 }
 
 export default MinimalReactText;
