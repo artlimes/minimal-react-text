@@ -1,8 +1,8 @@
 .tx-wrapper {
   position: relative;
+  margin: 0;
   padding-top: @label-line-height;
   text-align: left;
-  margin: 20px 0;
   &.tx-focused {
     div {
       &:after {
@@ -40,42 +40,42 @@
     line-height: @label-line-height;
   }
   .tx-input {
-    color:@input-color;
-    line-height: @input-line-height;
     font-size: @input-font-size;
+    line-height: @input-line-height;
     position: relative;
-    top: 6px;
     z-index: 2;
+    top: 6px;
     width: 100%;
+    color: @input-color;
     border: none;
     outline: none;
     background-color: transparent;
     &::-webkit-input-placeholder {
-      color: @placeholder-color;
       font-size: @input-font-size;
       font-weight: 300;
       line-height: @input-line-height;
+      color: @placeholder-color;
     }
     &:-moz-placeholder {
-      color: @placeholder-color;
       font-size: @input-font-size;
       /* FF 4-18 */
       font-weight: 300;
       line-height: @input-line-height;
+      color: @placeholder-color;
     }
     &::-moz-placeholder {
-      color: @placeholder-color;
       font-size: @input-font-size;
       /* FF 19+ */
       font-weight: 300;
       line-height: @input-line-height;
+      color: @placeholder-color;
     }
     &:-ms-input-placeholder {
-      color: @placeholder-color;
       font-size: @input-font-size;
       /* IE 10+ */
       font-weight: 300;
       line-height: @input-line-height;
+      color: @placeholder-color;
     }
     &:-webkit-autofill {
       -webkit-text-fill-color: @autofill-color;
@@ -95,14 +95,14 @@
     }
   }
   .tx-label {
-    color: @label-color;
     font-weight: normal;
     position: absolute;
     z-index: 1;
     left: 0;
     display: inline-block;
-    transition: transform 250ms;
     margin-bottom: 4px;
+    transition: transform 250ms;
+    color: @label-color;
     &.tx-above {
       transition: transform 250ms;
       transform: translateY(-100%);
@@ -113,9 +113,10 @@
     font-size: @error-font-size;
     line-height: @error-line-height;
     visibility: hidden;
-    min-height: @error-line-height;
-    color: @error-color;
     float: left;
+    min-height: @error-line-height;
+    margin: 0;
+    color: @error-color;
     &.tx-errortext-visible {
       visibility: visible;
     }
@@ -150,9 +151,9 @@
 .tx-wrapper {
   // to solve the sometimes visible ":after" of minimal-text
   & > div {
+    min-height: 25px;
     padding-bottom: 6px;
     border-bottom: 1px solid @white-underline-color;
-    min-height: 25px;
     &:after {
       display: none;
     }

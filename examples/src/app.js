@@ -11,7 +11,7 @@ ReactDOM.render(
 	    <MinimalReactText label="Label"/>
 
           <h3>With Placeholder</h3>
-            <MinimalReactText label="Ela" placeholder="Placeholder" type="password"/>
+            <MinimalReactText label="Label" placeholder="Placeholder" type="password"/>
 
           <h3>With Placeholder & InputValue</h3>
             <MinimalReactText label="Label" placeholder="Placeholder" inputValue="InputValue"/>

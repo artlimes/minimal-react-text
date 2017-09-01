@@ -150,7 +150,9 @@ class MinimalReactText extends Component {
             data-event-action={this.props['data-event-action']}
             name={this.props.inputName}
             placeholder={placeholder}
+            onKeyPress={this.props.onKeyPress}
             onFocus={this.onFocus.bind(this)}
+            tabIndex={this.props.tabIndex || "0"}
             onBlur={this.onBlur.bind(this)}
             onChange={this.onChange.bind(this)}
             type={type}
@@ -198,6 +200,10 @@ if (process.env.NODE_ENV !== 'production') {
     'theme': PropTypes.string,
     'hasError': PropTypes.bool,
     'type': PropTypes.string,
+    'tabIndex': PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number]),
+    'onKeyPress': PropTypes.func
   };
 }
 
