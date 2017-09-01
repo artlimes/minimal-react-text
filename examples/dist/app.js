@@ -34,7 +34,7 @@ _reactDom2['default'].render(_react2['default'].createElement(
       null,
       'With Placeholder'
     ),
-    _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', placeholder: 'Placeholder', type: 'password' }),
+    _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Ela', placeholder: 'Placeholder', type: 'password' }),
     _react2['default'].createElement(
       'h3',
       null,
@@ -52,7 +52,7 @@ _reactDom2['default'].render(_react2['default'].createElement(
       null,
       'Disabled'
     ),
-    _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', placeholder: 'Placeholder', isDisabled: true }),
+    _react2['default'].createElement(_componentsMinimalReactText2['default'], { label: 'Label', placeholder: 'Placeholder', isDisabled: false }),
     _react2['default'].createElement(
       'h3',
       null,
@@ -256,9 +256,7 @@ var MinimalReactText = (function (_Component) {
             'data-event-action': this.props['data-event-action'],
             name: this.props.inputName,
             placeholder: placeholder,
-            onKeyPress: this.props.onKeyPress,
             onFocus: this.onFocus.bind(this),
-            tabIndex: this.props.tabIndex || "0",
             onBlur: this.onBlur.bind(this),
             onChange: this.onChange.bind(this),
             type: type
@@ -308,9 +306,7 @@ if (process.env.NODE_ENV !== 'production') {
     'placeholder': _propTypes2['default'].string,
     'theme': _propTypes2['default'].string,
     'hasError': _propTypes2['default'].bool,
-    'type': _propTypes2['default'].string,
-    'tabIndex': _propTypes2['default'].oneOfType([_propTypes2['default'].string, _propTypes2['default'].number]),
-    'onKeyPress': _propTypes2['default'].func
+    'type': _propTypes2['default'].string
   };
 }
 
