@@ -145,6 +145,7 @@ class MinimalReactText extends Component {
             className={inputClasses}
             disabled={isDisabled}
             id={id}
+            min={this.props.min}
             required={isRequired}
             value={inputValue || ''}
             data-event-action={this.props['data-event-action']}
@@ -188,6 +189,7 @@ if (process.env.NODE_ENV !== 'production') {
     'errortextClasses': PropTypes.string,
     'data-event-action': PropTypes.string,
     'id': PropTypes.string,
+    'min': PropTypes.number,
     'inputName': PropTypes.string,
     'inputValue': PropTypes.oneOfType([
       PropTypes.string,

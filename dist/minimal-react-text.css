@@ -1,8 +1,8 @@
 .tx-wrapper {
   position: relative;
+  margin: 0;
   padding-top: 20px;
   text-align: left;
-  margin: 20px 0;
 }
 .tx-wrapper.tx-focused div:after {
   background-color: #ff115f;
@@ -33,43 +33,43 @@
   line-height: 20px;
 }
 .tx-wrapper .tx-input {
-  color: #212125;
-  line-height: 18px;
   font-size: 14px;
+  line-height: 18px;
   position: relative;
-  top: 6px;
   z-index: 2;
+  top: 6px;
   width: 100%;
+  color: #212125;
   border: none;
   outline: none;
   background-color: transparent;
 }
 .tx-wrapper .tx-input::-webkit-input-placeholder {
-  color: #9b9b9b;
   font-size: 14px;
   font-weight: 300;
   line-height: 18px;
+  color: #9b9b9b;
 }
 .tx-wrapper .tx-input:-moz-placeholder {
-  color: #9b9b9b;
   font-size: 14px;
   /* FF 4-18 */
   font-weight: 300;
   line-height: 18px;
+  color: #9b9b9b;
 }
 .tx-wrapper .tx-input::-moz-placeholder {
-  color: #9b9b9b;
   font-size: 14px;
   /* FF 19+ */
   font-weight: 300;
   line-height: 18px;
+  color: #9b9b9b;
 }
 .tx-wrapper .tx-input:-ms-input-placeholder {
-  color: #9b9b9b;
   font-size: 14px;
   /* IE 10+ */
   font-weight: 300;
   line-height: 18px;
+  color: #9b9b9b;
 }
 .tx-wrapper .tx-input:-webkit-autofill {
   -webkit-text-fill-color: #212125;
@@ -84,14 +84,14 @@
   content: " *";
 }
 .tx-wrapper .tx-label {
-  color: #4A4A4A;
   font-weight: normal;
   position: absolute;
   z-index: 1;
   left: 0;
   display: inline-block;
-  transition: transform 250ms;
   margin-bottom: 4px;
+  transition: transform 250ms;
+  color: #4A4A4A;
 }
 .tx-wrapper .tx-label.tx-above {
   transition: transform 250ms;
@@ -102,9 +102,10 @@
   font-size: 12px;
   line-height: 15px;
   visibility: hidden;
-  min-height: 15px;
-  color: #d7001a;
   float: left;
+  min-height: 15px;
+  margin: 0;
+  color: #d7001a;
 }
 .tx-wrapper .tx-errortext.tx-errortext-visible {
   visibility: visible;
@@ -126,9 +127,9 @@
   -webkit-text-fill-color: #fff;
 }
 .tx-wrapper > div {
+  min-height: 25px;
   padding-bottom: 6px;
   border-bottom: 1px solid #9b9b9b;
-  min-height: 25px;
 }
 .tx-wrapper > div:after {
   display: none;
