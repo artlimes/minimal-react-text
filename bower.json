@@ -4,7 +4,7 @@
     "dist/minimal-react-text.min.js",
     "dist/minimal-react-text.min.css"
   ],
-  "version": "1.0.0-rc.4",
+  "version": "1.0.0-rc.5",
   "homepage": "https://github.com/artlimes/minimal-react-text",
   "authors": [
     "Artlimes"
